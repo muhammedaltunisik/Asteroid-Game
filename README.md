@@ -2,7 +2,7 @@
 -----------
 
 Simple asteroids game made in C++ and SFML library.
-![ekran goruntusu](img\OyunGoruntusu.png)
+![ekran goruntusu](https://github.com/muhammedaltunisik/Asteroid-Game/tree/master/img)
 
 ### Dependencies
 ------
