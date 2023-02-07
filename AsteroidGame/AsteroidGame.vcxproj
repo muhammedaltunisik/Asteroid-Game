@@ -151,13 +151,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Astroid.cpp" />
+    <ClCompile Include="Asteroid.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mermiler.cpp" />
     <ClCompile Include="Oyuncu.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Astroid.h" />
+    <ClInclude Include="Asteroid.h" />
     <ClInclude Include="Mermiler.h" />
     <ClInclude Include="Oyuncu.h" />
   </ItemGroup>

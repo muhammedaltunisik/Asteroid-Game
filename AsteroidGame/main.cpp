@@ -9,7 +9,7 @@
 #include <sstream>
 #include "Mermiler.h"
 #include "Oyuncu.h"
-#include "Astroid.h"
+#include "Asteroid.h"
 
 const int W = 1200;
 const int H = 800;
@@ -17,7 +17,7 @@ const int H = 800;
 using namespace std;
 using namespace sf;
 
-bool CarpismaTesi(Astroid* a, Mermiler* b)
+bool CarpismaTesi(Asteroid* a, Mermiler* b)
 {
 	if (pow((b->x - a->x), 2) + pow((b->y - a->y), 2) < pow((a->R + b->R), 2))
 	{
@@ -29,7 +29,7 @@ bool CarpismaTesi(Astroid* a, Mermiler* b)
 	}
 }
 
-bool CarpismaTesit2(Astroid* a, Oyuncu* o)
+bool CarpismaTesit2(Asteroid* a, Oyuncu* o)
 {
 	if (pow((o->x - a->x), 2) + pow((o->y - a->y), 2) < pow((a->R + o->R), 2))
 		return true;
@@ -62,7 +62,7 @@ int main()
 
 	t1.loadFromFile("spaceship3.png");
 	t2.loadFromFile("space1.jpg");
-	t3.loadFromFile("astroid.png");
+	t3.loadFromFile("asteroid.png");
 	t4.loadFromFile("mermi.png");
 
 
@@ -70,7 +70,7 @@ int main()
 	Sprite background(t2);
 
 	list<Oyuncu*> oyuncular;
-	list<Astroid*> astroidler;
+	list<Asteroid*> astroidler;
 	list<Mermiler*> mermiler;
 
 	Oyuncu* o = new Oyuncu(t1, 600, 400, 0, 0, 0, 20);
@@ -78,7 +78,7 @@ int main()
 
 	for (int i = 0; i < 15; ++i)
 	{
-		Astroid* a = new Astroid(t3, rand() % W, rand() % H, rand() % 360, 20, 25);
+		Asteroid* a = new Asteroid(t3, rand() % W, rand() % H, rand() % 360, 20, 25);
 		astroidler.push_back(a);
 	}
 
@@ -141,7 +141,7 @@ int main()
 
 		for (auto i = astroidler.begin(); i != astroidler.end();)
 		{
-			Astroid* e = *i;
+			Asteroid* e = *i;
 
 			if (e->can == false) { i = astroidler.erase(i); delete e; }
 			else i++;
@@ -155,7 +155,7 @@ int main()
 
 		if (rand() % 150 == 0)
 		{
-			Astroid* a = new Astroid(t3, rand() % W, rand() % H, rand() % 360, 20, 25);
+			Asteroid* a = new Asteroid(t3, rand() % W, rand() % H, rand() % 360, 20, 25);
 			astroidler.push_back(a);
 		}
 

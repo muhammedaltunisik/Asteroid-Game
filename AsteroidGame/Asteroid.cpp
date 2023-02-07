@@ -1,7 +1,8 @@
-#include "Astroid.h"
+#include "Asteroid.h"
 const int W = 1200;
 const int H = 800;
-Astroid::Astroid(Texture& t, float x, float y, float aci, float hiz, float yaricapi)
+
+Asteroid::Asteroid(Texture& t, float x, float y, float aci, float hiz, float yaricapi)
 {
 	can = true;
 	astroid.setTexture(t);
@@ -13,7 +14,7 @@ Astroid::Astroid(Texture& t, float x, float y, float aci, float hiz, float yaric
 	dx = rand() % 8 - 4;
 	dy = rand() % 8 - 4;
 }
-void Astroid::cizim(RenderWindow& app)
+void Asteroid::cizim(RenderWindow& app)
 {
 	x += dx;
 	y += dy;

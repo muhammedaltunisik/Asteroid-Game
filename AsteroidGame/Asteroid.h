@@ -8,14 +8,14 @@
 
 using namespace sf;
 
-class Astroid {
+class Asteroid {
 public:
 	float Frame, speed;
 	Sprite astroid;
 	bool can;
 	String isim = "astroid";
 	float x = 0, y = 0, dx = 0, dy = 0, aci = 0, R = 0, hiz = 0;
-	Astroid(Texture&, float, float, float, float, float);
+	Asteroid(Texture&, float, float, float, float, float);
 	void cizim(RenderWindow&);
 };
 
